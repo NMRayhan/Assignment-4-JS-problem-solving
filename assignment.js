@@ -2,8 +2,8 @@
 function anaToVori(ana) {
     return ana / 16;
 }
-
-let totalGoldUnit = anaToVori(5)
+let ana = 48;
+let totalGoldUnit = anaToVori(ana)
 console.log(totalGoldUnit);
 
 // 2nd Question ans 
@@ -24,8 +24,8 @@ function picnicBudget(peoples) {
     const second100HeadCost = 4000;
     const third100HeadCost = 3000;
     let total = 0;
-    if (Number.isInteger(peoples) == true && peoples >= 1) {
-        if (peoples > 0 && peoples <= 100) {
+    if (Number.isInteger(peoples) == true && peoples > 0) {
+        if (peoples >= 1 && peoples <= 100) {
             total = peoples * first100HeadCost;
             return total;
         } else if (peoples > 100 && peoples <= 200) {
@@ -45,7 +45,7 @@ function picnicBudget(peoples) {
     }
 }
 
-console.log(picnicBudget(303));
+console.log(picnicBudget(301));
 
 // 4th Question ans 
 function oddFriend(friends) {
