@@ -34,7 +34,10 @@ function picnicBudget(peoples) {
             total = first100Total + second100Total;
             return total;
         } else {
-
+            let thirdTotal = (peoples - 200) * third100HeadCost;
+            let firstTotal = 100 * first100HeadCost;
+            let secondTotal = 100 * second100HeadCost;
+            total = firstTotal + secondTotal + thirdTotal;
             return total;
         }
     } else {
@@ -42,7 +45,7 @@ function picnicBudget(peoples) {
     }
 }
 
-console.log(picnicBudget(205));
+console.log(picnicBudget(303));
 
 // 4th Question ans 
 function oddFriend(friends) {
