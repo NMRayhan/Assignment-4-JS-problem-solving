@@ -1,6 +1,11 @@
 //1st Question ans
 function anaToVori(ana) {
-    return ana / 16;
+    if(ana>=0){
+        return ana / 16;
+    }else{
+        return 'Only Positive Number will Calculate';
+    }
+    
 }
 let ana = 48;
 let totalGoldUnit = anaToVori(ana)
@@ -12,10 +17,10 @@ function pandaCost(singara, chamuca, jilipi) {
     const chamucaPrice = 10;
     const jilipiPrice = 15;
 
-    let total = (singaraPrice * singara) + (chamucaPrice * chamuca) + (jilipiPrice * jilipi);
+    let total = (singaraPrice * Math.abs(singara)) + (chamucaPrice * Math.abs(chamuca)) + (jilipiPrice * Math.abs(jilipi));
     return total;
 }
-let totalFoodCost = pandaCost(3, 2, 2);
+let totalFoodCost = pandaCost(1, -1, 1);
 console.log(totalFoodCost)
 
 // 3rd Question ans 
@@ -49,13 +54,12 @@ console.log(picnicBudget(301));
 
 // 4th Question ans 
 function oddFriend(friends) {
-    let oddFriendArray = []
     for (const friend of friends) {
         if (friend.length % 2 == 1) {
-            oddFriendArray.push(friend);
+            return friend;
         }
     }
-    return oddFriendArray[0];
+    
 }
 
 let friendsName = ['Rassel', 'Muhina', 'Nuru', 'Jamshed', 'Rayhan', 'yahuda', 'muhaiminul', 'rafiq', 'rafi', 'rafid'];
